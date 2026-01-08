@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 270 11% 96%;
+    --foreground: 278 28% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 278 28% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 278 28% 15%;
+    --primary: 279 38% 35%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 270 20% 90%;
+    --secondary-foreground: 279 38% 35%;
+    --muted: 270 15% 92%;
+    --muted-foreground: 278 15% 45%;
+    --accent: 240 67% 94%;
+    --accent-foreground: 279 38% 35%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 270 10% 88%;
+    --input: 270 10% 90%;
+    --ring: 279 38% 35%;
+    --radius: 0.5rem;
+    --chart-1: 279 38% 35%;
+    --chart-2: 279 30% 55%;
+    --chart-3: 279 25% 65%;
+    --chart-4: 279 20% 75%;
+    --chart-5: 279 15% 85%;
+  }
+
+  .dark {
+    --background: 278 28% 10%;
+    --foreground: 0 0% 98%;
+    --card: 278 28% 10%;
+    --card-foreground: 0 0% 98%;
+    --popover: 278 28% 10%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 279 40% 60%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 278 20% 20%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 278 20% 20%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 278, 20%, 25%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 278 20% 20%;
+    --input: 278 20% 20%;
+    --ring: 279 40% 60%;
+    --chart-1: 279 40% 60%;
+    --chart-2: 279 35% 50%;
+    --chart-3: 279 30% 40%;
+    --chart-4: 279 25% 30%;
+    --chart-5: 279 20% 20%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .animate-breathing {
+    animation: breathing 4s ease-in-out infinite;
+  }
+}
+
+@keyframes breathing {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 35px rgba(255, 255, 255, 0.5);
+  }
+}
